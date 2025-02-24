@@ -39,8 +39,8 @@
 <script lang="ts" setup>
 
 const logout = async () => {
-    const { logout } = useUserStore();
-    await logout();
+    const { userAuth } = useUserStore();
+    await userAuth.logout();
 
     await useRouter().push('/login');
 }
