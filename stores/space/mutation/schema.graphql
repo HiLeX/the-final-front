@@ -1,0 +1,52 @@
+mutation createSpace($input: CreateSpaceInput!) {
+    space {
+        create(input: $input) {
+            id
+            name
+            description
+            createdAt
+            updatedAt
+        }
+    }
+}
+
+mutation createJob($createJobInput: CreateJobInput!, $attachPersonInput: AttachPersonInput!) {
+    job {
+        create(input: $createJobInput) {
+            id
+            title
+            description
+            mission
+            status
+            ## Cote serveur on injecte dans une table la liaison job_id user_id create_at deleted_at
+            ## Et on viendra toujours récup la dernière création ?
+            #user {
+            #    id
+            #    name
+            #    email
+            #}
+        }
+    }
+}
+
+mutation userAttachToJob($jobId: Int!, $input: AttachPersonInput!) {
+    job(id: $jobId) {
+        attachOwner(input: $input) {
+            id
+            title
+            description
+            mission
+            status
+            user {
+                id
+                name
+                email
+            }
+        }
+    }
+}
+
+## On crée un poste dans un espace. Ce poste possède un titre, une mission, une description, une date de début et une date de fin.
+## On attribue à ce poste une personne
+## Cette attribution peut etre en attente d'approbation par l'utilisateur
+## Tu peux créer des groupes de postes

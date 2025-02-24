@@ -1,0 +1,19 @@
+query userSpaces {
+     user {
+            me {
+                spaces {
+                    id
+                    name
+                    description
+                    createdAt
+                    updatedAt
+                    members {
+                        id
+                        name
+                        email
+                        role
+                    }
+                }
+            }
+     }
+}

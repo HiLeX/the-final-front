@@ -1,0 +1,14 @@
+fragment UserInfos on User {
+    email
+    firstname
+    lastname
+    sex
+}
+
+query userInfos {
+    user {
+        me {
+            ... UserInfos
+        }
+    }
+}

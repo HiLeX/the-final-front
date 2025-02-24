@@ -1,0 +1,7 @@
+mutation setProfile($input: UserProfileInput!) {
+    user {
+        setProfile(input: $input) {
+            ... UserInfos
+        }
+    }
+}

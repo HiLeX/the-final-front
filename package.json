@@ -10,9 +10,32 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@apollo/client": "^3.13.1",
+    "@pinia/nuxt": "0.10.1",
+    "@tailwindcss/vite": "^4.0.8",
+    "daisyui": "5.0.0-beta.8",
+    "graphql": "^16.10.0",
     "nuxt": "^3.15.4",
+    "pinia": "^3.0.1",
+    "tailwindcss": "^4.0.8",
     "vue": "latest",
     "vue-router": "latest"
   },
-  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.5",
+    "@graphql-codegen/typescript": "^4.1.5",
+    "@graphql-codegen/typescript-operations": "^4.5.1",
+    "@graphql-codegen/typescript-vue-apollo": "4.1.1",
+    "@nuxtjs/apollo": "5.0.0-alpha.14",
+    "@vue/apollo-composable": "^4.2.1"
+  },
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "vue-demi"
+    ],
+    "onlyBuiltDependencies": [
+      "vue-demi"
+    ]
+  }
 }
